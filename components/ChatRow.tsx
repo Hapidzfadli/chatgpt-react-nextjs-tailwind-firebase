@@ -21,7 +21,7 @@ function ChatRow({ id }: Props) {
         collection(db, 'users', session?.user?.email!, 'chats', id, 'messages'),
     )
 
-    console.log(messages?.docs.length)
+ 
 
     useEffect(() => {
         if(!pathname) return;

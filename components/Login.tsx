@@ -5,7 +5,7 @@ export default function Login() {
   return (
     <div className="bg-[#11a37f] h-screen flex flex-col items-center justify-center text-center">
         <Image
-            src={"https://seeklogo.com/images/C/chatgpt-logo-02AFA704B5-seeklogo.com.png"}
+            src={"https://links.papareact.com/89k"}
             width={100}
             height={100}
             alt="logo"

@@ -16,14 +16,14 @@ export default async function RootLayout({
   return (
     <html>
       <head />
-      <body>
+      <body className="h-screen overflow-scroll">
         <SessionProvider session={session}>
           {!session ? (
             <Login />
           ) : (
             <div className="flex">
 
-            <div className="bg-[#202123] max-w-ws lg:max-w-sm md:lg:max-w-sm h-screen overflow-y-auto md:min-w-[20rem]">
+            <div className="bg-[#202123] min-w-[3rem] max-w-ws lg:max-w-sm md:lg:max-w-sm h-screen overflow-y-auto md:min-w-[20rem]">
               <Sidebar/>
             </div>
             

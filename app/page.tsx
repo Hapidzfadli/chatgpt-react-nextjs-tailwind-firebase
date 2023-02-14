@@ -4,18 +4,18 @@ import { BoltIcon, ExclamationTriangleIcon, SunIcon } from '@heroicons/react/24/
 function HomePage() {
   return (
     <div className='flex flex-col items-center justify-center h-screen px-2 text-white'>
-        <h1 className='text-5xl font-bold mb-20'>ChatGPT</h1>
+        <h1 className='text-5xl font-bold mb-20 sm:text-sm'>ChatGPT</h1>
 
-        <div className='flex space-x-2 text-center'>
+        <div className='flex lg:flex-row  sm:flex-col space-x-2 text-center sm:text-sm'>
           <div>
             <div className='flex flex-col items-center justify-center mb-5'>
             <SunIcon className="h-6 w-6"/>
-              <h2>Examples</h2>
+              <h2 className=''>Examples</h2>
             </div>
             <div className="space-y-2">
-              <p className="infoText">"Explain Something to me"</p>
-              <p className="infoText">"What the different the dog and cat?"</p>
-              <p className="infoText">"What is the color of the sun?"</p>
+              <p className="infoText sm:text-sm">"Explain Something to me"</p>
+              <p className="infoText sm:text-sm">"What the different the dog and cat?"</p>
+              <p className="infoText sm:text-sm">"What is the color of the sun?"</p>
             </div>
           </div>
           <div>
