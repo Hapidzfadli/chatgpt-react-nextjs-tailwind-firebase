@@ -18,8 +18,10 @@ function ChatRow({ id }: Props) {
     const [active, setActive] = useState(false);
 
     const [messages] = useCollection(    
-        collection(db, 'users', session?.user?.email!, 'chats', id, 'messege'),
+        collection(db, 'users', session?.user?.email!, 'chats', id, 'messages'),
     )
+
+    console.log(messages?.docs.length)
 
     useEffect(() => {
         if(!pathname) return;
@@ -35,8 +37,8 @@ function ChatRow({ id }: Props) {
     href={`/chat/${id}`}
     >
         <ChatBubbleLeftIcon className="h-6 w-6" />
-        <p className="flex-1 hidden md:inline-flex truncate">
-            {messages?.docs[messages?.docs.length]?.data().text() || "New Chat"}
+        <p className="flex-1 hidden md:inline-flex truncate overflow-hidden">
+            {messages?.docs[0]?.data().text || "New Chat"}
         </p>
         <TrashIcon onClick={removeChat} className="h-6 w-6 text-gray-700 hover:text-red-700" />
     </Link>
